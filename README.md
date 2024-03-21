@@ -1,8 +1,8 @@
 # MB91F467D_Fujitsu UART_SPI Mater IRQ
 
-==========================================================================
+--------------------------------------------------------------------------
                    Template Project for MB91F467D 
-==========================================================================
+--------------------------------------------------------------------------
                    Fujitsu Microelectronics Europe GmbH                       
                  http://emea.fujitsu.com/microelectronics 
                                                             
@@ -15,7 +15,7 @@
  (V3.4 or higher "\START.HTM") or on our Internet Pages:
  http://www.fme.gsdc.de/gsdc.htm
  http://emea.fujitsu.com/microelectronics 
-==========================================================================
+--------------------------------------------------------------------------
                
 History
 Date      Ver   Author  Softune   Description
@@ -27,7 +27,7 @@ Date      Ver   Author  Softune   Description
                                   Support of monitor Debugger in ext. Flash
 15.11.06  1.3   UMa     V60L06    Wait for transmission finished
 
-==========================================================================
+--------------------------------------------------------------------------
 
 This is a SPI project for the MB91F467D Series. It includes some basic 
 settings for e.g. Linker, C-Compiler which must be checked and modified in 
