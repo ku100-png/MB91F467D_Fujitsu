@@ -1,0 +1,2186 @@
+FR/FR80 Family SOFTUNE Linker Control List                                                      2006-11-15 13:18:01  Page:     1
+
+Option File(s)
+  C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OPT\91460_uart_spi_master_irq.opl
+
+Control(s)
+  -f C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OPT\91460_uart_spi_master_irq.opl
+  @ -g 
+  @ -AL 2
+  @ -ro ROM_AREA=0x00040000/0x0014FFFF
+  @ -ra D_RAM=0x00028000/0x0002FFFF
+  @ -ra ID_RAM=0x00030000/0x00037FFF
+  @ -ra I_CACHE=0x00007000/0x000070FF
+  @ -sc CODE+@INIT+CONST=ROM_AREA
+  @ -sc DATA/Data+INIT/Data+SSTACK/Data+USTACK/Data=D_RAM
+  @ -sc CODE_START/Code=0x000F4000
+  @ -sc INTVECT/Const=0x000FFC00
+  @ -check_locate 
+  @ -m C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\LST\91460_uart_spi_master_irq.mp1
+  @ -pl 60
+  @ -pw 132
+  @ -alin C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\LST
+  @ -alout C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\LST
+  @ -Xals 
+  @ -Xalr 
+  @ -na 
+  @ -w 1
+  @ -Xset_rora 
+  @ -cwno 
+  @ -a 
+  @ -cpu MB91F467D
+  @ -o C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\ABS\91460_uart_spi_master_irq.abs
+  -Xdof 
+
+Input Module(s)
+     1 C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OBJ\vectors.obj(vectors)
+     2 C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OBJ\Start91460.obj(Start91460)
+     3 C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OBJ\mb91467d.obj(mb91467d)
+     4 C:\_home\customers\bosch\spi\91460_uart_spi_master_irq-v13\STANDALONE\OBJ\MAIN.obj(MAIN)
+
+Error(s)
+     ** Nothing **
+
+FR/FR80 Family SOFTUNE Linker Mapping List                                                      2006-11-15 13:18:01  Page:     2
+
+S_Addr. -E_Addr.   Size      Section Type Al     Sec.(Top 81)                                                                      C
+00028000-00028000  00000001  DATA  P RW-- 04 REL  DATA
+00028004-000283FF  000003FC  STACK P RW-- 04 REL  SSTACK
+00028004-........  00000000  DATA  P RW-- 04 REL  INIT
+00028400-00028401  00000002  STACK P RW-- 04 REL  USTACK
+00040000-0004041B  0000041C  CODE  P R-XI 02 REL  CODE
+0004041C-........  00000000  CONST P R--I 04 REL  CONST
+0004041C-........  00000000  DATA  P R--- 04 REL #INIT
+000F4000-000F41ED  000001EE  CODE  P R-XI 04 REL  CODE_START
+000FFC00-000FFFFF  00000400  CONST P R--I 04 REL  INTVECT
+00148000-0014800F  00000010  CODE  N R-XI 00 ABS  SECURITY_VECTORS
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     3
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+ 00040202(ABS)      Addr.  OM/LM @_DefaultIRQHandler
+                                  DefaultIRQHandler
+ 000403E6(ABS)      Addr.  OM/LM  _Ext2IRQHandler
+                                  Ext2IRQHandler
+ 00040000(ABS)      Addr.  OM/LM  _InitIrqLevels
+                                  InitIrqLevels
+ 000403CC(ABS)      Addr.  OM/LM  _USARTRxIRQHandler
+                                  USARTRxIRQHandler
+ 000F4000(ABS)      Addr.  OM/LM @__start
+                                  _start
+ 00028004(ABS)      Addr.  OM/LM @__systemstack
+                                  _systemstack
+ 00028400(ABS)      Addr.  OM/LM @__systemstack_top
+                                  _systemstack_top
+ 00028400(ABS)      Addr.  OM/LM @__userstack
+                                  _userstack
+ 00028402(ABS)      Addr.  OM/LM @__userstack_top
+                                  _userstack_top
+(U;0642)            EQU    OM/LM @_acr0
+                                  acr0
+(U;0646)            EQU    OM/LM @_acr1
+                                  acr1
+(U;064A)            EQU    OM/LM @_acr2
+                                  acr2
+(U;064E)            EQU    OM/LM @_acr3
+                                  acr3
+(U;0652)            EQU    OM/LM @_acr4
+                                  acr4
+(U;0656)            EQU    OM/LM @_acr5
+                                  acr5
+(U;065A)            EQU    OM/LM @_acr6
+                                  acr6
+(U;065E)            EQU    OM/LM @_acr7
+                                  acr7
+(U;01AD)            EQU    OM/LM @_acsr0
+                                  acsr0
+(U;01A7)            EQU    OM/LM @_adcr0
+                                  adcr0
+(U;01A6)            EQU    OM/LM @_adcr1
+                                  adcr1
+(U;01A5)            EQU    OM/LM @_adcs0
+                                  adcs0
+(U;01A4)            EQU    OM/LM @_adcs1
+                                  adcs1
+(U;01A9)            EQU    OM/LM @_adct0
+                                  adct0
+(U;01A8)            EQU    OM/LM @_adct1
+                                  adct1
+(U;01AB)            EQU    OM/LM @_adech
+                                  adech
+(U;01A0)            EQU    OM/LM @_aderh
+                                  aderh
+(U;01A2)            EQU    OM/LM @_aderl
+                                  aderl
+(U;01AA)            EQU    OM/LM @_adsch
+                                  adsch
+(U;0640)            EQU    OM/LM @_asr0
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     4
+
+                                  asr0
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0644)            EQU    OM/LM @_asr1
+                                  asr1
+(U;0648)            EQU    OM/LM @_asr2
+                                  asr2
+(U;064C)            EQU    OM/LM @_asr3
+                                  asr3
+(U;0650)            EQU    OM/LM @_asr4
+                                  asr4
+(U;0654)            EQU    OM/LM @_asr5
+                                  asr5
+(U;0658)            EQU    OM/LM @_asr6
+                                  asr6
+(U;065C)            EQU    OM/LM @_asr7
+                                  asr7
+(U;0660)            EQU    OM/LM @_awr0
+                                  awr0
+(U;0662)            EQU    OM/LM @_awr1
+                                  awr1
+(U;0664)            EQU    OM/LM @_awr2
+                                  awr2
+(U;0666)            EQU    OM/LM @_awr3
+                                  awr3
+(U;0668)            EQU    OM/LM @_awr4
+                                  awr4
+(U;066A)            EQU    OM/LM @_awr5
+                                  awr5
+(U;066C)            EQU    OM/LM @_awr6
+                                  awr6
+(U;066E)            EQU    OM/LM @_awr7
+                                  awr7
+(U;F080)            EQU    OM/LM @_bad0
+                                  bad0
+(U;F084)            EQU    OM/LM @_bad1
+                                  bad1
+(U;F0A8)            EQU    OM/LM @_bad10
+                                  bad10
+(U;F0AC)            EQU    OM/LM @_bad11
+                                  bad11
+(U;F0B0)            EQU    OM/LM @_bad12
+                                  bad12
+(U;F0B4)            EQU    OM/LM @_bad13
+                                  bad13
+(U;F0B8)            EQU    OM/LM @_bad14
+                                  bad14
+(U;F0BC)            EQU    OM/LM @_bad15
+                                  bad15
+(U;F088)            EQU    OM/LM @_bad2
+                                  bad2
+(U;F08C)            EQU    OM/LM @_bad3
+                                  bad3
+(U;F090)            EQU    OM/LM @_bad4
+                                  bad4
+(U;F094)            EQU    OM/LM @_bad5
+                                  bad5
+(U;F098)            EQU    OM/LM @_bad6
+                                  bad6
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     5
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;F09C)            EQU    OM/LM @_bad7
+                                  bad7
+(U;F0A0)            EQU    OM/LM @_bad8
+                                  bad8
+(U;F0A4)            EQU    OM/LM @_bad9
+                                  bad9
+(U;F020)            EQU    OM/LM @_bcr0
+                                  bcr0
+(U;F024)            EQU    OM/LM @_bcr1
+                                  bcr1
+(U;F028)            EQU    OM/LM @_bcr2
+                                  bcr2
+(U;F02C)            EQU    OM/LM @_bcr3
+                                  bcr3
+(U;F030)            EQU    OM/LM @_bcr4
+                                  bcr4
+(U;F034)            EQU    OM/LM @_bcr5
+                                  bcr5
+(U;F038)            EQU    OM/LM @_bcr6
+                                  bcr6
+(U;F03C)            EQU    OM/LM @_bcr7
+                                  bcr7
+(U;F000)            EQU    OM/LM @_bctrl
+                                  bctrl
+(U;85)              EQU    OM/LM @_bgr002
+                                  bgr002
+(U;89)              EQU    OM/LM @_bgr004
+                                  bgr004
+(U;8B)              EQU    OM/LM @_bgr005
+                                  bgr005
+(U;8D)              EQU    OM/LM @_bgr006
+                                  bgr006
+(U;8F)              EQU    OM/LM @_bgr007
+                                  bgr007
+(U;84)              EQU    OM/LM @_bgr02
+                                  bgr02
+(U;88)              EQU    OM/LM @_bgr04
+                                  bgr04
+(U;8A)              EQU    OM/LM  _bgr05
+                                  bgr05
+(U;8C)              EQU    OM/LM @_bgr06
+                                  bgr06
+(U;8E)              EQU    OM/LM @_bgr07
+                                  bgr07
+(U;84)              EQU    OM/LM @_bgr102
+                                  bgr102
+(U;88)              EQU    OM/LM @_bgr104
+                                  bgr104
+(U;8A)              EQU    OM/LM @_bgr105
+                                  bgr105
+(U;8C)              EQU    OM/LM @_bgr106
+                                  bgr106
+(U;8E)              EQU    OM/LM @_bgr107
+                                  bgr107
+(U;F008)            EQU    OM/LM @_biac
+                                  biac
+(U;F010)            EQU    OM/LM @_birq
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     6
+
+                                  birq
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;F00C)            EQU    OM/LM @_boac
+                                  boac
+(U;C00C)            EQU    OM/LM @_brpe0
+                                  brpe0
+(U;C10C)            EQU    OM/LM @_brpe1
+                                  brpe1
+(U;C20C)            EQU    OM/LM @_brpe2
+                                  brpe2
+(U;C00C)            EQU    OM/LM @_brper0
+                                  brper0
+(U;C10C)            EQU    OM/LM @_brper1
+                                  brper1
+(U;C20C)            EQU    OM/LM @_brper2
+                                  brper2
+(U;03F0)            EQU    OM/LM @_bsd0
+                                  bsd0
+(U;03F4)            EQU    OM/LM @_bsd1
+                                  bsd1
+(U;03F8)            EQU    OM/LM @_bsdc
+                                  bsdc
+(U;03FC)            EQU    OM/LM @_bsrr
+                                  bsrr
+(U;F004)            EQU    OM/LM @_bstat
+                                  bstat
+(U;00148004)        EQU    OM/LM @_bsv1
+                                  bsv1
+(U;0014800C)        EQU    OM/LM @_bsv2
+                                  bsv2
+(U;C006)            EQU    OM/LM @_btr0
+                                  btr0
+(U;C106)            EQU    OM/LM @_btr1
+                                  btr1
+(U;C206)            EQU    OM/LM @_btr2
+                                  btr2
+ 00028000(ABS)      Addr.  OM/LM @_c
+                                  c
+(U;04C1)            EQU    OM/LM @_canckd
+                                  canckd
+(U;04C0)            EQU    OM/LM @_canpre
+                                  canpre
+(U;C00E)            EQU    OM/LM @_cbsync0
+                                  cbsync0
+(U;C10E)            EQU    OM/LM @_cbsync1
+                                  cbsync1
+(U;C20E)            EQU    OM/LM @_cbsync2
+                                  cbsync2
+(U;0681)            EQU    OM/LM @_cher
+                                  cher
+(U;0484)            EQU    OM/LM @_clkr
+                                  clkr
+(U;04AF)            EQU    OM/LM @_cmcfg
+                                  cmcfg
+(U;04BB)            EQU    OM/LM @_cmcr
+                                  cmcr
+(U;04B8)            EQU    OM/LM @_cmpr
+                                  cmpr
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     7
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;04BC)            EQU    OM/LM @_cmt1
+                                  cmt1
+(U;04BE)            EQU    OM/LM @_cmt2
+                                  cmt2
+(U;04AE)            EQU    OM/LM @_cscfg
+                                  cscfg
+(U;0680)            EQU    OM/LM @_cser
+                                  cser
+(U;04AD)            EQU    OM/LM @_csvcr
+                                  csvcr
+(U;04AC)            EQU    OM/LM @_csvtr
+                                  csvtr
+(U;0483)            EQU    OM/LM @_ctbr
+                                  ctbr
+(U;C000)            EQU    OM/LM @_ctrlr0
+                                  ctrlr0
+(U;C100)            EQU    OM/LM @_ctrlr1
+                                  ctrlr1
+(U;C200)            EQU    OM/LM @_ctrlr2
+                                  ctrlr2
+(U;04B0)            EQU    OM/LM @_cucr
+                                  cucr
+(U;04B2)            EQU    OM/LM @_cutd
+                                  cutd
+(U;04B4)            EQU    OM/LM @_cutr1
+                                  cutr1
+(U;04B6)            EQU    OM/LM @_cutr2
+                                  cutr2
+(U;0D40)            EQU    OM/LM @_ddr00
+                                  ddr00
+(U;0D41)            EQU    OM/LM @_ddr01
+                                  ddr01
+(U;0D42)            EQU    OM/LM @_ddr02
+                                  ddr02
+(U;0D43)            EQU    OM/LM @_ddr03
+                                  ddr03
+(U;0D44)            EQU    OM/LM @_ddr04
+                                  ddr04
+(U;0D45)            EQU    OM/LM @_ddr05
+                                  ddr05
+(U;0D46)            EQU    OM/LM @_ddr06
+                                  ddr06
+(U;0D47)            EQU    OM/LM @_ddr07
+                                  ddr07
+(U;0D48)            EQU    OM/LM @_ddr08
+                                  ddr08
+(U;0D49)            EQU    OM/LM @_ddr09
+                                  ddr09
+(U;0D4A)            EQU    OM/LM @_ddr10
+                                  ddr10
+(U;0D4D)            EQU    OM/LM @_ddr13
+                                  ddr13
+(U;0D4E)            EQU    OM/LM @_ddr14
+                                  ddr14
+(U;0D4F)            EQU    OM/LM @_ddr15
+                                  ddr15
+(U;0D50)            EQU    OM/LM  _ddr16
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     8
+
+                                  ddr16
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0D51)            EQU    OM/LM @_ddr17
+                                  ddr17
+(U;0D52)            EQU    OM/LM  _ddr18
+                                  ddr18
+(U;0D53)            EQU    OM/LM @_ddr19
+                                  ddr19
+(U;0D54)            EQU    OM/LM @_ddr20
+                                  ddr20
+(U;0D56)            EQU    OM/LM @_ddr22
+                                  ddr22
+(U;0D57)            EQU    OM/LM @_ddr23
+                                  ddr23
+(U;0D58)            EQU    OM/LM  _ddr24
+                                  ddr24
+(U;0D59)            EQU    OM/LM @_ddr25
+                                  ddr25
+(U;0D5A)            EQU    OM/LM @_ddr26
+                                  ddr26
+(U;0D5B)            EQU    OM/LM @_ddr27
+                                  ddr27
+(U;0D5D)            EQU    OM/LM @_ddr29
+                                  ddr29
+(U;38)              EQU    OM/LM @_dicr
+                                  dicr
+(U;0486)            EQU    OM/LM @_divr0
+                                  divr0
+(U;0487)            EQU    OM/LM @_divr1
+                                  divr1
+(U;0200)            EQU    OM/LM @_dmaca0
+                                  dmaca0
+(U;0208)            EQU    OM/LM @_dmaca1
+                                  dmaca1
+(U;0210)            EQU    OM/LM @_dmaca2
+                                  dmaca2
+(U;0218)            EQU    OM/LM @_dmaca3
+                                  dmaca3
+(U;0220)            EQU    OM/LM @_dmaca4
+                                  dmaca4
+(U;0204)            EQU    OM/LM @_dmacb0
+                                  dmacb0
+(U;020C)            EQU    OM/LM @_dmacb1
+                                  dmacb1
+(U;0214)            EQU    OM/LM @_dmacb2
+                                  dmacb2
+(U;021C)            EQU    OM/LM @_dmacb3
+                                  dmacb3
+(U;0224)            EQU    OM/LM @_dmacb4
+                                  dmacb4
+(U;0240)            EQU    OM/LM @_dmacr
+                                  dmacr
+(U;1004)            EQU    OM/LM @_dmada0
+                                  dmada0
+(U;100C)            EQU    OM/LM @_dmada1
+                                  dmada1
+(U;1014)            EQU    OM/LM @_dmada2
+                                  dmada2
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:     9
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;101C)            EQU    OM/LM @_dmada3
+                                  dmada3
+(U;1024)            EQU    OM/LM @_dmada4
+                                  dmada4
+(U;1000)            EQU    OM/LM @_dmasa0
+                                  dmasa0
+(U;1008)            EQU    OM/LM @_dmasa1
+                                  dmasa1
+(U;1010)            EQU    OM/LM @_dmasa2
+                                  dmasa2
+(U;1018)            EQU    OM/LM @_dmasa3
+                                  dmasa3
+(U;1020)            EQU    OM/LM @_dmasa4
+                                  dmasa4
+(U;55)              EQU    OM/LM @_eccr02
+                                  eccr02
+(U;65)              EQU    OM/LM @_eccr04
+                                  eccr04
+(U;6D)              EQU    OM/LM  _eccr05
+                                  eccr05
+(U;75)              EQU    OM/LM @_eccr06
+                                  eccr06
+(U;7D)              EQU    OM/LM @_eccr07
+                                  eccr07
+(U;30)              EQU    OM/LM  _eirr0
+                                  eirr0
+(U;34)              EQU    OM/LM @_eirr1
+                                  eirr1
+(U;32)              EQU    OM/LM  _elvr0
+                                  elvr0
+(U;36)              EQU    OM/LM @_elvr1
+                                  elvr1
+(U;31)              EQU    OM/LM  _enir0
+                                  enir0
+(U;35)              EQU    OM/LM @_enir1
+                                  enir1
+(U;0DCA)            EQU    OM/LM @_epfr10
+                                  epfr10
+(U;0DCD)            EQU    OM/LM @_epfr13
+                                  epfr13
+(U;0DCE)            EQU    OM/LM @_epfr14
+                                  epfr14
+(U;0DCF)            EQU    OM/LM @_epfr15
+                                  epfr15
+(U;0DD0)            EQU    OM/LM @_epfr16
+                                  epfr16
+(U;0DD2)            EQU    OM/LM @_epfr18
+                                  epfr18
+(U;0DD3)            EQU    OM/LM  _epfr19
+                                  epfr19
+(U;0DD4)            EQU    OM/LM @_epfr20
+                                  epfr20
+(U;0DDA)            EQU    OM/LM @_epfr26
+                                  epfr26
+(U;0DDB)            EQU    OM/LM @_epfr27
+                                  epfr27
+(U;0E80)            EQU    OM/LM @_epilr00
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    10
+
+                                  epilr00
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0E81)            EQU    OM/LM @_epilr01
+                                  epilr01
+(U;0E82)            EQU    OM/LM @_epilr02
+                                  epilr02
+(U;0E83)            EQU    OM/LM @_epilr03
+                                  epilr03
+(U;0E84)            EQU    OM/LM @_epilr04
+                                  epilr04
+(U;0E85)            EQU    OM/LM @_epilr05
+                                  epilr05
+(U;0E86)            EQU    OM/LM @_epilr06
+                                  epilr06
+(U;0E87)            EQU    OM/LM @_epilr07
+                                  epilr07
+(U;0E88)            EQU    OM/LM @_epilr08
+                                  epilr08
+(U;0E89)            EQU    OM/LM @_epilr09
+                                  epilr09
+(U;0E8A)            EQU    OM/LM @_epilr10
+                                  epilr10
+(U;0E8D)            EQU    OM/LM @_epilr13
+                                  epilr13
+(U;0E8E)            EQU    OM/LM @_epilr14
+                                  epilr14
+(U;0E8F)            EQU    OM/LM @_epilr15
+                                  epilr15
+(U;0E80)            EQU    OM/LM @_epilr16
+                                  epilr16
+(U;0E81)            EQU    OM/LM @_epilr17
+                                  epilr17
+(U;0E82)            EQU    OM/LM @_epilr18
+                                  epilr18
+(U;0E83)            EQU    OM/LM @_epilr19
+                                  epilr19
+(U;0E84)            EQU    OM/LM @_epilr20
+                                  epilr20
+(U;0E86)            EQU    OM/LM @_epilr22
+                                  epilr22
+(U;0E87)            EQU    OM/LM @_epilr23
+                                  epilr23
+(U;0E88)            EQU    OM/LM @_epilr24
+                                  epilr24
+(U;0E89)            EQU    OM/LM @_epilr25
+                                  epilr25
+(U;0E8A)            EQU    OM/LM @_epilr26
+                                  epilr26
+(U;0E8B)            EQU    OM/LM @_epilr27
+                                  epilr27
+(U;0E8D)            EQU    OM/LM @_epilr29
+                                  epilr29
+(U;C004)            EQU    OM/LM @_errcnt0
+                                  errcnt0
+(U;C104)            EQU    OM/LM @_errcnt1
+                                  errcnt1
+(U;C204)            EQU    OM/LM @_errcnt2
+                                  errcnt2
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    11
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;54)              EQU    OM/LM @_escr02
+                                  escr02
+(U;64)              EQU    OM/LM @_escr04
+                                  escr04
+(U;6C)              EQU    OM/LM  _escr05
+                                  escr05
+(U;74)              EQU    OM/LM @_escr06
+                                  escr06
+(U;7C)              EQU    OM/LM @_escr07
+                                  escr07
+(U;700C)            EQU    OM/LM @_fcha0
+                                  fcha0
+(U;7010)            EQU    OM/LM @_fcha1
+                                  fcha1
+(U;7002)            EQU    OM/LM @_fchcr
+                                  fchcr
+(U;67)              EQU    OM/LM @_fcr04
+                                  fcr04
+(U;6F)              EQU    OM/LM @_fcr05
+                                  fcr05
+(U;77)              EQU    OM/LM @_fcr06
+                                  fcr06
+(U;7F)              EQU    OM/LM @_fcr07
+                                  fcr07
+(U;7008)            EQU    OM/LM @_fmac
+                                  fmac
+(U;7001)            EQU    OM/LM @_fmcr
+                                  fmcr
+(U;7000)            EQU    OM/LM @_fmcs
+                                  fmcs
+(U;7007)            EQU    OM/LM @_fmps
+                                  fmps
+(U;7004)            EQU    OM/LM @_fmwt
+                                  fmwt
+(U;7006)            EQU    OM/LM @_fmwt2
+                                  fmwt2
+(U;7100)            EQU    OM/LM @_fscr0
+                                  fscr0
+(U;7104)            EQU    OM/LM @_fscr1
+                                  fscr1
+(U;66)              EQU    OM/LM @_fsr04
+                                  fsr04
+(U;6E)              EQU    OM/LM @_fsr05
+                                  fsr05
+(U;76)              EQU    OM/LM @_fsr06
+                                  fsr06
+(U;7E)              EQU    OM/LM @_fsr07
+                                  fsr07
+(U;00148000)        EQU    OM/LM @_fsv1
+                                  fsv1
+(U;00148008)        EQU    OM/LM @_fsv2
+                                  fsv2
+(U;0104)            EQU    OM/LM @_gcn11
+                                  gcn11
+(U;0108)            EQU    OM/LM @_gcn12
+                                  gcn12
+(U;0320)            EQU    OM/LM @_gcn13
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    12
+
+                                  gcn13
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0107)            EQU    OM/LM @_gcn21
+                                  gcn21
+(U;010B)            EQU    OM/LM @_gcn22
+                                  gcn22
+(U;0323)            EQU    OM/LM @_gcn23
+                                  gcn23
+(U;39)              EQU    OM/LM @_hrcl
+                                  hrcl
+(U;04C7)            EQU    OM/LM  _hwwd
+                                  hwwd
+(U;04C6)            EQU    OM/LM @_hwwde
+                                  hwwde
+(U;D0)              EQU    OM/LM @_ibcr0
+                                  ibcr0
+(U;0368)            EQU    OM/LM @_ibcr2
+                                  ibcr2
+(U;0374)            EQU    OM/LM @_ibcr3
+                                  ibcr3
+(U;D1)              EQU    OM/LM @_ibsr0
+                                  ibsr0
+(U;0369)            EQU    OM/LM @_ibsr2
+                                  ibsr2
+(U;0375)            EQU    OM/LM @_ibsr3
+                                  ibsr3
+(U;DA)              EQU    OM/LM @_iccr0
+                                  iccr0
+(U;0372)            EQU    OM/LM @_iccr2
+                                  iccr2
+(U;037E)            EQU    OM/LM @_iccr3
+                                  iccr3
+(U;0440)            EQU    OM/LM @_icr00
+                                  icr00
+(U;0441)            EQU    OM/LM  _icr01
+                                  icr01
+(U;0442)            EQU    OM/LM  _icr02
+                                  icr02
+(U;0443)            EQU    OM/LM  _icr03
+                                  icr03
+(U;0444)            EQU    OM/LM  _icr04
+                                  icr04
+(U;0445)            EQU    OM/LM  _icr05
+                                  icr05
+(U;0446)            EQU    OM/LM  _icr06
+                                  icr06
+(U;0447)            EQU    OM/LM  _icr07
+                                  icr07
+(U;0448)            EQU    OM/LM  _icr08
+                                  icr08
+(U;0449)            EQU    OM/LM  _icr09
+                                  icr09
+(U;044A)            EQU    OM/LM  _icr10
+                                  icr10
+(U;044B)            EQU    OM/LM  _icr11
+                                  icr11
+(U;044C)            EQU    OM/LM  _icr12
+                                  icr12
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    13
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;044D)            EQU    OM/LM  _icr13
+                                  icr13
+(U;044E)            EQU    OM/LM  _icr14
+                                  icr14
+(U;044F)            EQU    OM/LM  _icr15
+                                  icr15
+(U;0450)            EQU    OM/LM  _icr16
+                                  icr16
+(U;0451)            EQU    OM/LM  _icr17
+                                  icr17
+(U;0452)            EQU    OM/LM  _icr18
+                                  icr18
+(U;0453)            EQU    OM/LM  _icr19
+                                  icr19
+(U;0454)            EQU    OM/LM  _icr20
+                                  icr20
+(U;0455)            EQU    OM/LM  _icr21
+                                  icr21
+(U;0456)            EQU    OM/LM  _icr22
+                                  icr22
+(U;0457)            EQU    OM/LM  _icr23
+                                  icr23
+(U;0458)            EQU    OM/LM  _icr24
+                                  icr24
+(U;0459)            EQU    OM/LM  _icr25
+                                  icr25
+(U;045A)            EQU    OM/LM  _icr26
+                                  icr26
+(U;045B)            EQU    OM/LM  _icr27
+                                  icr27
+(U;045C)            EQU    OM/LM  _icr28
+                                  icr28
+(U;045D)            EQU    OM/LM  _icr29
+                                  icr29
+(U;045E)            EQU    OM/LM  _icr30
+                                  icr30
+(U;045F)            EQU    OM/LM  _icr31
+                                  icr31
+(U;0460)            EQU    OM/LM  _icr32
+                                  icr32
+(U;0461)            EQU    OM/LM  _icr33
+                                  icr33
+(U;0462)            EQU    OM/LM  _icr34
+                                  icr34
+(U;0463)            EQU    OM/LM  _icr35
+                                  icr35
+(U;0464)            EQU    OM/LM  _icr36
+                                  icr36
+(U;0465)            EQU    OM/LM  _icr37
+                                  icr37
+(U;0466)            EQU    OM/LM  _icr38
+                                  icr38
+(U;0467)            EQU    OM/LM  _icr39
+                                  icr39
+(U;0468)            EQU    OM/LM  _icr40
+                                  icr40
+(U;0469)            EQU    OM/LM  _icr41
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    14
+
+                                  icr41
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;046A)            EQU    OM/LM  _icr42
+                                  icr42
+(U;046B)            EQU    OM/LM  _icr43
+                                  icr43
+(U;046C)            EQU    OM/LM  _icr44
+                                  icr44
+(U;046D)            EQU    OM/LM  _icr45
+                                  icr45
+(U;046E)            EQU    OM/LM  _icr46
+                                  icr46
+(U;046F)            EQU    OM/LM  _icr47
+                                  icr47
+(U;0470)            EQU    OM/LM  _icr48
+                                  icr48
+(U;0471)            EQU    OM/LM  _icr49
+                                  icr49
+(U;0472)            EQU    OM/LM  _icr50
+                                  icr50
+(U;0473)            EQU    OM/LM  _icr51
+                                  icr51
+(U;0474)            EQU    OM/LM  _icr52
+                                  icr52
+(U;0475)            EQU    OM/LM  _icr53
+                                  icr53
+(U;0476)            EQU    OM/LM  _icr54
+                                  icr54
+(U;0477)            EQU    OM/LM  _icr55
+                                  icr55
+(U;0478)            EQU    OM/LM  _icr56
+                                  icr56
+(U;0479)            EQU    OM/LM  _icr57
+                                  icr57
+(U;047A)            EQU    OM/LM  _icr58
+                                  icr58
+(U;047B)            EQU    OM/LM  _icr59
+                                  icr59
+(U;047C)            EQU    OM/LM  _icr60
+                                  icr60
+(U;047D)            EQU    OM/LM  _icr61
+                                  icr61
+(U;047E)            EQU    OM/LM  _icr62
+                                  icr62
+(U;047F)            EQU    OM/LM  _icr63
+                                  icr63
+(U;0181)            EQU    OM/LM @_ics01
+                                  ics01
+(U;0183)            EQU    OM/LM @_ics23
+                                  ics23
+(U;02D1)            EQU    OM/LM @_ics45
+                                  ics45
+(U;02D3)            EQU    OM/LM @_ics67
+                                  ics67
+(U;D9)              EQU    OM/LM @_idar0
+                                  idar0
+(U;0371)            EQU    OM/LM @_idar2
+                                  idar2
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    15
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;037D)            EQU    OM/LM @_idar3
+                                  idar3
+(U;C01A)            EQU    OM/LM @_if1arb10
+                                  if1arb10
+(U;C11A)            EQU    OM/LM @_if1arb11
+                                  if1arb11
+(U;C21A)            EQU    OM/LM @_if1arb12
+                                  if1arb12
+(U;C018)            EQU    OM/LM @_if1arb120
+                                  if1arb120
+(U;C118)            EQU    OM/LM @_if1arb121
+                                  if1arb121
+(U;C218)            EQU    OM/LM @_if1arb122
+                                  if1arb122
+(U;C018)            EQU    OM/LM @_if1arb20
+                                  if1arb20
+(U;C118)            EQU    OM/LM @_if1arb21
+                                  if1arb21
+(U;C218)            EQU    OM/LM @_if1arb22
+                                  if1arb22
+(U;C012)            EQU    OM/LM @_if1cmsk0
+                                  if1cmsk0
+(U;C112)            EQU    OM/LM @_if1cmsk1
+                                  if1cmsk1
+(U;C212)            EQU    OM/LM @_if1cmsk2
+                                  if1cmsk2
+(U;C010)            EQU    OM/LM @_if1creq0
+                                  if1creq0
+(U;C110)            EQU    OM/LM @_if1creq1
+                                  if1creq1
+(U;C210)            EQU    OM/LM @_if1creq2
+                                  if1creq2
+(U;C020)            EQU    OM/LM @_if1dta10
+                                  if1dta10
+(U;C120)            EQU    OM/LM @_if1dta11
+                                  if1dta11
+(U;C220)            EQU    OM/LM @_if1dta12
+                                  if1dta12
+(U;C020)            EQU    OM/LM @_if1dta120
+                                  if1dta120
+(U;C120)            EQU    OM/LM @_if1dta121
+                                  if1dta121
+(U;C220)            EQU    OM/LM @_if1dta122
+                                  if1dta122
+(U;C022)            EQU    OM/LM @_if1dta20
+                                  if1dta20
+(U;C122)            EQU    OM/LM @_if1dta21
+                                  if1dta21
+(U;C222)            EQU    OM/LM @_if1dta22
+                                  if1dta22
+(U;C032)            EQU    OM/LM @_if1dta_swp10
+                                  if1dta_swp10
+(U;C132)            EQU    OM/LM @_if1dta_swp11
+                                  if1dta_swp11
+(U;C232)            EQU    OM/LM @_if1dta_swp12
+                                  if1dta_swp12
+(U;C030)            EQU    OM/LM @_if1dta_swp120
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    16
+
+                                  if1dta_swp120
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C130)            EQU    OM/LM @_if1dta_swp121
+                                  if1dta_swp121
+(U;C230)            EQU    OM/LM @_if1dta_swp122
+                                  if1dta_swp122
+(U;C030)            EQU    OM/LM @_if1dta_swp20
+                                  if1dta_swp20
+(U;C130)            EQU    OM/LM @_if1dta_swp21
+                                  if1dta_swp21
+(U;C230)            EQU    OM/LM @_if1dta_swp22
+                                  if1dta_swp22
+(U;C024)            EQU    OM/LM @_if1dtb10
+                                  if1dtb10
+(U;C124)            EQU    OM/LM @_if1dtb11
+                                  if1dtb11
+(U;C224)            EQU    OM/LM @_if1dtb12
+                                  if1dtb12
+(U;C024)            EQU    OM/LM @_if1dtb120
+                                  if1dtb120
+(U;C124)            EQU    OM/LM @_if1dtb121
+                                  if1dtb121
+(U;C224)            EQU    OM/LM @_if1dtb122
+                                  if1dtb122
+(U;C026)            EQU    OM/LM @_if1dtb20
+                                  if1dtb20
+(U;C126)            EQU    OM/LM @_if1dtb21
+                                  if1dtb21
+(U;C226)            EQU    OM/LM @_if1dtb22
+                                  if1dtb22
+(U;C036)            EQU    OM/LM @_if1dtb_swp10
+                                  if1dtb_swp10
+(U;C136)            EQU    OM/LM @_if1dtb_swp11
+                                  if1dtb_swp11
+(U;C236)            EQU    OM/LM @_if1dtb_swp12
+                                  if1dtb_swp12
+(U;C034)            EQU    OM/LM @_if1dtb_swp120
+                                  if1dtb_swp120
+(U;C134)            EQU    OM/LM @_if1dtb_swp121
+                                  if1dtb_swp121
+(U;C234)            EQU    OM/LM @_if1dtb_swp122
+                                  if1dtb_swp122
+(U;C034)            EQU    OM/LM @_if1dtb_swp20
+                                  if1dtb_swp20
+(U;C134)            EQU    OM/LM @_if1dtb_swp21
+                                  if1dtb_swp21
+(U;C234)            EQU    OM/LM @_if1dtb_swp22
+                                  if1dtb_swp22
+(U;C01C)            EQU    OM/LM @_if1mctr0
+                                  if1mctr0
+(U;C11C)            EQU    OM/LM @_if1mctr1
+                                  if1mctr1
+(U;C21C)            EQU    OM/LM @_if1mctr2
+                                  if1mctr2
+(U;C016)            EQU    OM/LM @_if1msk10
+                                  if1msk10
+(U;C116)            EQU    OM/LM @_if1msk11
+                                  if1msk11
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    17
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C216)            EQU    OM/LM @_if1msk12
+                                  if1msk12
+(U;C014)            EQU    OM/LM @_if1msk120
+                                  if1msk120
+(U;C114)            EQU    OM/LM @_if1msk121
+                                  if1msk121
+(U;C214)            EQU    OM/LM @_if1msk122
+                                  if1msk122
+(U;C014)            EQU    OM/LM @_if1msk20
+                                  if1msk20
+(U;C114)            EQU    OM/LM @_if1msk21
+                                  if1msk21
+(U;C214)            EQU    OM/LM @_if1msk22
+                                  if1msk22
+(U;C04A)            EQU    OM/LM @_if2arb10
+                                  if2arb10
+(U;C14A)            EQU    OM/LM @_if2arb11
+                                  if2arb11
+(U;C24A)            EQU    OM/LM @_if2arb12
+                                  if2arb12
+(U;C048)            EQU    OM/LM @_if2arb120
+                                  if2arb120
+(U;C148)            EQU    OM/LM @_if2arb121
+                                  if2arb121
+(U;C248)            EQU    OM/LM @_if2arb122
+                                  if2arb122
+(U;C048)            EQU    OM/LM @_if2arb20
+                                  if2arb20
+(U;C148)            EQU    OM/LM @_if2arb21
+                                  if2arb21
+(U;C248)            EQU    OM/LM @_if2arb22
+                                  if2arb22
+(U;C042)            EQU    OM/LM @_if2cmsk0
+                                  if2cmsk0
+(U;C142)            EQU    OM/LM @_if2cmsk1
+                                  if2cmsk1
+(U;C242)            EQU    OM/LM @_if2cmsk2
+                                  if2cmsk2
+(U;C040)            EQU    OM/LM @_if2creq0
+                                  if2creq0
+(U;C140)            EQU    OM/LM @_if2creq1
+                                  if2creq1
+(U;C240)            EQU    OM/LM @_if2creq2
+                                  if2creq2
+(U;C050)            EQU    OM/LM @_if2dta10
+                                  if2dta10
+(U;C150)            EQU    OM/LM @_if2dta11
+                                  if2dta11
+(U;C250)            EQU    OM/LM @_if2dta12
+                                  if2dta12
+(U;C050)            EQU    OM/LM @_if2dta120
+                                  if2dta120
+(U;C150)            EQU    OM/LM @_if2dta121
+                                  if2dta121
+(U;C250)            EQU    OM/LM @_if2dta122
+                                  if2dta122
+(U;C052)            EQU    OM/LM @_if2dta20
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    18
+
+                                  if2dta20
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C152)            EQU    OM/LM @_if2dta21
+                                  if2dta21
+(U;C252)            EQU    OM/LM @_if2dta22
+                                  if2dta22
+(U;C062)            EQU    OM/LM @_if2dta_swp10
+                                  if2dta_swp10
+(U;C162)            EQU    OM/LM @_if2dta_swp11
+                                  if2dta_swp11
+(U;C262)            EQU    OM/LM @_if2dta_swp12
+                                  if2dta_swp12
+(U;C060)            EQU    OM/LM @_if2dta_swp120
+                                  if2dta_swp120
+(U;C160)            EQU    OM/LM @_if2dta_swp121
+                                  if2dta_swp121
+(U;C260)            EQU    OM/LM @_if2dta_swp122
+                                  if2dta_swp122
+(U;C060)            EQU    OM/LM @_if2dta_swp20
+                                  if2dta_swp20
+(U;C160)            EQU    OM/LM @_if2dta_swp21
+                                  if2dta_swp21
+(U;C260)            EQU    OM/LM @_if2dta_swp22
+                                  if2dta_swp22
+(U;C054)            EQU    OM/LM @_if2dtb10
+                                  if2dtb10
+(U;C154)            EQU    OM/LM @_if2dtb11
+                                  if2dtb11
+(U;C254)            EQU    OM/LM @_if2dtb12
+                                  if2dtb12
+(U;C054)            EQU    OM/LM @_if2dtb120
+                                  if2dtb120
+(U;C154)            EQU    OM/LM @_if2dtb121
+                                  if2dtb121
+(U;C254)            EQU    OM/LM @_if2dtb122
+                                  if2dtb122
+(U;C056)            EQU    OM/LM @_if2dtb20
+                                  if2dtb20
+(U;C156)            EQU    OM/LM @_if2dtb21
+                                  if2dtb21
+(U;C256)            EQU    OM/LM @_if2dtb22
+                                  if2dtb22
+(U;C066)            EQU    OM/LM @_if2dtb_swp10
+                                  if2dtb_swp10
+(U;C166)            EQU    OM/LM @_if2dtb_swp11
+                                  if2dtb_swp11
+(U;C266)            EQU    OM/LM @_if2dtb_swp12
+                                  if2dtb_swp12
+(U;C064)            EQU    OM/LM @_if2dtb_swp120
+                                  if2dtb_swp120
+(U;C164)            EQU    OM/LM @_if2dtb_swp121
+                                  if2dtb_swp121
+(U;C264)            EQU    OM/LM @_if2dtb_swp122
+                                  if2dtb_swp122
+(U;C064)            EQU    OM/LM @_if2dtb_swp20
+                                  if2dtb_swp20
+(U;C164)            EQU    OM/LM @_if2dtb_swp21
+                                  if2dtb_swp21
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    19
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C264)            EQU    OM/LM @_if2dtb_swp22
+                                  if2dtb_swp22
+(U;C04C)            EQU    OM/LM @_if2mctr0
+                                  if2mctr0
+(U;C14C)            EQU    OM/LM @_if2mctr1
+                                  if2mctr1
+(U;C24C)            EQU    OM/LM @_if2mctr2
+                                  if2mctr2
+(U;C046)            EQU    OM/LM @_if2msk10
+                                  if2msk10
+(U;C146)            EQU    OM/LM @_if2msk11
+                                  if2msk11
+(U;C246)            EQU    OM/LM @_if2msk12
+                                  if2msk12
+(U;C044)            EQU    OM/LM @_if2msk120
+                                  if2msk120
+(U;C144)            EQU    OM/LM @_if2msk121
+                                  if2msk121
+(U;C244)            EQU    OM/LM @_if2msk122
+                                  if2msk122
+(U;C044)            EQU    OM/LM @_if2msk20
+                                  if2msk20
+(U;C144)            EQU    OM/LM @_if2msk21
+                                  if2msk21
+(U;C244)            EQU    OM/LM @_if2msk22
+                                  if2msk22
+ 00040218(ABS)      Addr.  OM/LM @_int2_init
+                                  int2_init
+(U;C0A2)            EQU    OM/LM @_intpnd10
+                                  intpnd10
+(U;C1A2)            EQU    OM/LM @_intpnd11
+                                  intpnd11
+(U;C2A2)            EQU    OM/LM @_intpnd12
+                                  intpnd12
+(U;C0A0)            EQU    OM/LM @_intpnd120
+                                  intpnd120
+(U;C1A0)            EQU    OM/LM @_intpnd121
+                                  intpnd121
+(U;C2A0)            EQU    OM/LM @_intpnd122
+                                  intpnd122
+(U;C0A0)            EQU    OM/LM @_intpnd20
+                                  intpnd20
+(U;C1A0)            EQU    OM/LM @_intpnd21
+                                  intpnd21
+(U;C2A0)            EQU    OM/LM @_intpnd22
+                                  intpnd22
+(U;C008)            EQU    OM/LM @_intr0
+                                  intr0
+(U;C108)            EQU    OM/LM @_intr1
+                                  intr1
+(U;C208)            EQU    OM/LM @_intr2
+                                  intr2
+(U;0678)            EQU    OM/LM @_iowr0
+                                  iowr0
+(U;0679)            EQU    OM/LM @_iowr1
+                                  iowr1
+(U;067A)            EQU    OM/LM @_iowr2
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    20
+
+                                  iowr2
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;067B)            EQU    OM/LM @_iowr3
+                                  iowr3
+(U;0184)            EQU    OM/LM @_ipcp0
+                                  ipcp0
+(U;0186)            EQU    OM/LM @_ipcp1
+                                  ipcp1
+(U;0188)            EQU    OM/LM @_ipcp2
+                                  ipcp2
+(U;018A)            EQU    OM/LM @_ipcp3
+                                  ipcp3
+(U;02D4)            EQU    OM/LM @_ipcp4
+                                  ipcp4
+(U;02D6)            EQU    OM/LM @_ipcp5
+                                  ipcp5
+(U;02D8)            EQU    OM/LM @_ipcp6
+                                  ipcp6
+(U;02DA)            EQU    OM/LM @_ipcp7
+                                  ipcp7
+(U;D7)              EQU    OM/LM @_isba0
+                                  isba0
+(U;036F)            EQU    OM/LM @_isba2
+                                  isba2
+(U;037B)            EQU    OM/LM @_isba3
+                                  isba3
+(U;D6)              EQU    OM/LM @_ismk0
+                                  ismk0
+(U;036E)            EQU    OM/LM @_ismk2
+                                  ismk2
+(U;037A)            EQU    OM/LM @_ismk3
+                                  ismk3
+(U;D2)              EQU    OM/LM @_itba0
+                                  itba0
+(U;036A)            EQU    OM/LM @_itba2
+                                  itba2
+(U;0376)            EQU    OM/LM @_itba3
+                                  itba3
+(U;D2)              EQU    OM/LM @_itbah0
+                                  itbah0
+(U;036A)            EQU    OM/LM @_itbah2
+                                  itbah2
+(U;0376)            EQU    OM/LM @_itbah3
+                                  itbah3
+(U;D3)              EQU    OM/LM @_itbal0
+                                  itbal0
+(U;036B)            EQU    OM/LM @_itbal2
+                                  itbal2
+(U;0377)            EQU    OM/LM @_itbal3
+                                  itbal3
+(U;D4)              EQU    OM/LM @_itmk0
+                                  itmk0
+(U;036C)            EQU    OM/LM @_itmk2
+                                  itmk2
+(U;0378)            EQU    OM/LM @_itmk3
+                                  itmk3
+(U;D4)              EQU    OM/LM @_itmkh0
+                                  itmkh0
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    21
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;036C)            EQU    OM/LM @_itmkh2
+                                  itmkh2
+(U;0378)            EQU    OM/LM @_itmkh3
+                                  itmkh3
+(U;D5)              EQU    OM/LM @_itmkl0
+                                  itmkl0
+(U;036D)            EQU    OM/LM @_itmkl2
+                                  itmkl2
+(U;0379)            EQU    OM/LM @_itmkl3
+                                  itmkl3
+ 00040246(ABS)      Addr.  OM/LM @_led_init
+                                  led_init
+(U;04C5)            EQU    OM/LM @_lvdet
+                                  lvdet
+(U;04C4)            EQU    OM/LM @_lvsel
+                                  lvsel
+ 0004039A(ABS)      Addr.  OM/LM  _main
+                                  main
+(U;0670)            EQU    OM/LM @_mcra
+                                  mcra
+(U;0671)            EQU    OM/LM @_mcrb
+                                  mcrb
+(U;07FD)            EQU    OM/LM @_modr
+                                  modr
+(U;C0B2)            EQU    OM/LM @_msgval10
+                                  msgval10
+(U;C1B2)            EQU    OM/LM @_msgval11
+                                  msgval11
+(U;C2B2)            EQU    OM/LM @_msgval12
+                                  msgval12
+(U;C0B0)            EQU    OM/LM @_msgval120
+                                  msgval120
+(U;C1B0)            EQU    OM/LM @_msgval121
+                                  msgval121
+(U;C2B0)            EQU    OM/LM @_msgval122
+                                  msgval122
+(U;C0B0)            EQU    OM/LM @_msgval20
+                                  msgval20
+(U;C1B0)            EQU    OM/LM @_msgval21
+                                  msgval21
+(U;C2B0)            EQU    OM/LM @_msgval22
+                                  msgval22
+(U;C0B4)            EQU    OM/LM @_msgval340
+                                  msgval340
+(U;C092)            EQU    OM/LM @_newdt10
+                                  newdt10
+(U;C192)            EQU    OM/LM @_newdt11
+                                  newdt11
+(U;C292)            EQU    OM/LM @_newdt12
+                                  newdt12
+(U;C090)            EQU    OM/LM @_newdt120
+                                  newdt120
+(U;C190)            EQU    OM/LM @_newdt121
+                                  newdt121
+(U;C290)            EQU    OM/LM @_newdt122
+                                  newdt122
+(U;C090)            EQU    OM/LM @_newdt20
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    22
+
+                                  newdt20
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C190)            EQU    OM/LM @_newdt21
+                                  newdt21
+(U;C290)            EQU    OM/LM @_newdt22
+                                  newdt22
+(U;0190)            EQU    OM/LM @_occp0
+                                  occp0
+(U;0192)            EQU    OM/LM @_occp1
+                                  occp1
+(U;0194)            EQU    OM/LM @_occp2
+                                  occp2
+(U;0196)            EQU    OM/LM @_occp3
+                                  occp3
+(U;018C)            EQU    OM/LM @_ocs01
+                                  ocs01
+(U;018E)            EQU    OM/LM @_ocs23
+                                  ocs23
+(U;0494)            EQU    OM/LM @_oscc1
+                                  oscc1
+(U;0496)            EQU    OM/LM @_oscc2
+                                  oscc2
+(U;04CC)            EQU    OM/LM @_osccr
+                                  osccr
+(U;04C8)            EQU    OM/LM @_oscrh
+                                  oscrh
+(U;04C9)            EQU    OM/LM @_oscrl
+                                  oscrl
+(U;0495)            EQU    OM/LM @_oscs1
+                                  oscs1
+(U;0497)            EQU    OM/LM @_oscs2
+                                  oscs2
+(U;0170)            EQU    OM/LM @_p0tmcsr
+                                  p0tmcsr
+(U;0170)            EQU    OM/LM @_p0tmcsrh
+                                  p0tmcsrh
+(U;0171)            EQU    OM/LM @_p0tmcsrl
+                                  p0tmcsrl
+(U;0176)            EQU    OM/LM @_p0tmr
+                                  p0tmr
+(U;0174)            EQU    OM/LM @_p0tmrlr
+                                  p0tmrlr
+(U;0172)            EQU    OM/LM @_p1tmcsr
+                                  p1tmcsr
+(U;0172)            EQU    OM/LM @_p1tmcsrh
+                                  p1tmcsrh
+(U;0173)            EQU    OM/LM @_p1tmcsrl
+                                  p1tmcsrl
+(U;017A)            EQU    OM/LM @_p1tmr
+                                  p1tmr
+(U;0178)            EQU    OM/LM @_p1tmrlr
+                                  p1tmrlr
+(U;0136)            EQU    OM/LM @_pcn04
+                                  pcn04
+(U;013E)            EQU    OM/LM @_pcn05
+                                  pcn05
+(U;0146)            EQU    OM/LM @_pcn06
+                                  pcn06
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    23
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;014E)            EQU    OM/LM @_pcn07
+                                  pcn07
+(U;0156)            EQU    OM/LM @_pcn08
+                                  pcn08
+(U;015E)            EQU    OM/LM @_pcn09
+                                  pcn09
+(U;0166)            EQU    OM/LM @_pcn10
+                                  pcn10
+(U;016E)            EQU    OM/LM @_pcn11
+                                  pcn11
+(U;0336)            EQU    OM/LM @_pcn12
+                                  pcn12
+(U;033E)            EQU    OM/LM @_pcn13
+                                  pcn13
+(U;0346)            EQU    OM/LM @_pcn14
+                                  pcn14
+(U;034E)            EQU    OM/LM @_pcn15
+                                  pcn15
+(U;0136)            EQU    OM/LM @_pcnh04
+                                  pcnh04
+(U;013E)            EQU    OM/LM @_pcnh05
+                                  pcnh05
+(U;0146)            EQU    OM/LM @_pcnh06
+                                  pcnh06
+(U;014E)            EQU    OM/LM @_pcnh07
+                                  pcnh07
+(U;0156)            EQU    OM/LM @_pcnh08
+                                  pcnh08
+(U;015E)            EQU    OM/LM @_pcnh09
+                                  pcnh09
+(U;0166)            EQU    OM/LM @_pcnh10
+                                  pcnh10
+(U;016E)            EQU    OM/LM @_pcnh11
+                                  pcnh11
+(U;0336)            EQU    OM/LM @_pcnh12
+                                  pcnh12
+(U;033E)            EQU    OM/LM @_pcnh13
+                                  pcnh13
+(U;0346)            EQU    OM/LM @_pcnh14
+                                  pcnh14
+(U;034E)            EQU    OM/LM @_pcnh15
+                                  pcnh15
+(U;0137)            EQU    OM/LM @_pcnl04
+                                  pcnl04
+(U;013F)            EQU    OM/LM @_pcnl05
+                                  pcnl05
+(U;0147)            EQU    OM/LM @_pcnl06
+                                  pcnl06
+(U;014F)            EQU    OM/LM @_pcnl07
+                                  pcnl07
+(U;0157)            EQU    OM/LM @_pcnl08
+                                  pcnl08
+(U;015F)            EQU    OM/LM @_pcnl09
+                                  pcnl09
+(U;0167)            EQU    OM/LM @_pcnl10
+                                  pcnl10
+(U;016F)            EQU    OM/LM @_pcnl11
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    24
+
+                                  pcnl11
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0337)            EQU    OM/LM @_pcnl12
+                                  pcnl12
+(U;033F)            EQU    OM/LM @_pcnl13
+                                  pcnl13
+(U;0347)            EQU    OM/LM @_pcnl14
+                                  pcnl14
+(U;034F)            EQU    OM/LM @_pcnl15
+                                  pcnl15
+(U;0132)            EQU    OM/LM @_pcsr04
+                                  pcsr04
+(U;013A)            EQU    OM/LM @_pcsr05
+                                  pcsr05
+(U;0142)            EQU    OM/LM @_pcsr06
+                                  pcsr06
+(U;014A)            EQU    OM/LM @_pcsr07
+                                  pcsr07
+(U;0152)            EQU    OM/LM @_pcsr08
+                                  pcsr08
+(U;015A)            EQU    OM/LM @_pcsr09
+                                  pcsr09
+(U;0162)            EQU    OM/LM @_pcsr10
+                                  pcsr10
+(U;016A)            EQU    OM/LM @_pcsr11
+                                  pcsr11
+(U;0332)            EQU    OM/LM @_pcsr12
+                                  pcsr12
+(U;033A)            EQU    OM/LM @_pcsr13
+                                  pcsr13
+(U;0342)            EQU    OM/LM @_pcsr14
+                                  pcsr14
+(U;034A)            EQU    OM/LM @_pcsr15
+                                  pcsr15
+(U;00)              EQU    OM/LM @_pdr00
+                                  pdr00
+(U;01)              EQU    OM/LM @_pdr01
+                                  pdr01
+(U;02)              EQU    OM/LM @_pdr02
+                                  pdr02
+(U;03)              EQU    OM/LM @_pdr03
+                                  pdr03
+(U;04)              EQU    OM/LM @_pdr04
+                                  pdr04
+(U;05)              EQU    OM/LM @_pdr05
+                                  pdr05
+(U;06)              EQU    OM/LM @_pdr06
+                                  pdr06
+(U;07)              EQU    OM/LM @_pdr07
+                                  pdr07
+(U;08)              EQU    OM/LM @_pdr08
+                                  pdr08
+(U;09)              EQU    OM/LM @_pdr09
+                                  pdr09
+(U;0A)              EQU    OM/LM @_pdr10
+                                  pdr10
+(U;0D)              EQU    OM/LM @_pdr13
+                                  pdr13
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    25
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0E)              EQU    OM/LM @_pdr14
+                                  pdr14
+(U;0F)              EQU    OM/LM @_pdr15
+                                  pdr15
+(U;10)              EQU    OM/LM  _pdr16
+                                  pdr16
+(U;11)              EQU    OM/LM @_pdr17
+                                  pdr17
+(U;12)              EQU    OM/LM  _pdr18
+                                  pdr18
+(U;13)              EQU    OM/LM @_pdr19
+                                  pdr19
+(U;14)              EQU    OM/LM @_pdr20
+                                  pdr20
+(U;16)              EQU    OM/LM @_pdr22
+                                  pdr22
+(U;17)              EQU    OM/LM @_pdr23
+                                  pdr23
+(U;18)              EQU    OM/LM @_pdr24
+                                  pdr24
+(U;19)              EQU    OM/LM @_pdr25
+                                  pdr25
+(U;1A)              EQU    OM/LM @_pdr26
+                                  pdr26
+(U;1B)              EQU    OM/LM @_pdr27
+                                  pdr27
+(U;1D)              EQU    OM/LM @_pdr29
+                                  pdr29
+(U;0D00)            EQU    OM/LM @_pdrd00
+                                  pdrd00
+(U;0D01)            EQU    OM/LM @_pdrd01
+                                  pdrd01
+(U;0D02)            EQU    OM/LM @_pdrd02
+                                  pdrd02
+(U;0D03)            EQU    OM/LM @_pdrd03
+                                  pdrd03
+(U;0D04)            EQU    OM/LM @_pdrd04
+                                  pdrd04
+(U;0D05)            EQU    OM/LM @_pdrd05
+                                  pdrd05
+(U;0D06)            EQU    OM/LM @_pdrd06
+                                  pdrd06
+(U;0D07)            EQU    OM/LM @_pdrd07
+                                  pdrd07
+(U;0D08)            EQU    OM/LM @_pdrd08
+                                  pdrd08
+(U;0D09)            EQU    OM/LM @_pdrd09
+                                  pdrd09
+(U;0D0A)            EQU    OM/LM @_pdrd10
+                                  pdrd10
+(U;0D0D)            EQU    OM/LM @_pdrd13
+                                  pdrd13
+(U;0D0E)            EQU    OM/LM @_pdrd14
+                                  pdrd14
+(U;0D0F)            EQU    OM/LM @_pdrd15
+                                  pdrd15
+(U;0D10)            EQU    OM/LM @_pdrd16
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    26
+
+                                  pdrd16
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0D11)            EQU    OM/LM @_pdrd17
+                                  pdrd17
+(U;0D12)            EQU    OM/LM @_pdrd18
+                                  pdrd18
+(U;0D13)            EQU    OM/LM @_pdrd19
+                                  pdrd19
+(U;0D14)            EQU    OM/LM @_pdrd20
+                                  pdrd20
+(U;0D16)            EQU    OM/LM @_pdrd22
+                                  pdrd22
+(U;0D17)            EQU    OM/LM @_pdrd23
+                                  pdrd23
+(U;0D18)            EQU    OM/LM @_pdrd24
+                                  pdrd24
+(U;0D19)            EQU    OM/LM @_pdrd25
+                                  pdrd25
+(U;0D1A)            EQU    OM/LM @_pdrd26
+                                  pdrd26
+(U;0D1B)            EQU    OM/LM @_pdrd27
+                                  pdrd27
+(U;0D1D)            EQU    OM/LM @_pdrd29
+                                  pdrd29
+(U;0134)            EQU    OM/LM @_pdut04
+                                  pdut04
+(U;013C)            EQU    OM/LM @_pdut05
+                                  pdut05
+(U;0144)            EQU    OM/LM @_pdut06
+                                  pdut06
+(U;014C)            EQU    OM/LM @_pdut07
+                                  pdut07
+(U;0154)            EQU    OM/LM @_pdut08
+                                  pdut08
+(U;015C)            EQU    OM/LM @_pdut09
+                                  pdut09
+(U;0164)            EQU    OM/LM @_pdut10
+                                  pdut10
+(U;016C)            EQU    OM/LM @_pdut11
+                                  pdut11
+(U;0334)            EQU    OM/LM @_pdut12
+                                  pdut12
+(U;033C)            EQU    OM/LM @_pdut13
+                                  pdut13
+(U;0344)            EQU    OM/LM @_pdut14
+                                  pdut14
+(U;034C)            EQU    OM/LM @_pdut15
+                                  pdut15
+(U;0D80)            EQU    OM/LM @_pfr00
+                                  pfr00
+(U;0D81)            EQU    OM/LM @_pfr01
+                                  pfr01
+(U;0D82)            EQU    OM/LM @_pfr02
+                                  pfr02
+(U;0D83)            EQU    OM/LM @_pfr03
+                                  pfr03
+(U;0D84)            EQU    OM/LM @_pfr04
+                                  pfr04
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    27
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0D85)            EQU    OM/LM @_pfr05
+                                  pfr05
+(U;0D86)            EQU    OM/LM @_pfr06
+                                  pfr06
+(U;0D87)            EQU    OM/LM @_pfr07
+                                  pfr07
+(U;0D88)            EQU    OM/LM @_pfr08
+                                  pfr08
+(U;0D89)            EQU    OM/LM @_pfr09
+                                  pfr09
+(U;0D8A)            EQU    OM/LM @_pfr10
+                                  pfr10
+(U;0D8D)            EQU    OM/LM @_pfr13
+                                  pfr13
+(U;0D8E)            EQU    OM/LM @_pfr14
+                                  pfr14
+(U;0D8F)            EQU    OM/LM @_pfr15
+                                  pfr15
+(U;0D90)            EQU    OM/LM  _pfr16
+                                  pfr16
+(U;0D91)            EQU    OM/LM @_pfr17
+                                  pfr17
+(U;0D92)            EQU    OM/LM  _pfr18
+                                  pfr18
+(U;0D93)            EQU    OM/LM  _pfr19
+                                  pfr19
+(U;0D94)            EQU    OM/LM @_pfr20
+                                  pfr20
+(U;0D96)            EQU    OM/LM @_pfr22
+                                  pfr22
+(U;0D97)            EQU    OM/LM @_pfr23
+                                  pfr23
+(U;0D98)            EQU    OM/LM  _pfr24
+                                  pfr24
+(U;0D99)            EQU    OM/LM @_pfr25
+                                  pfr25
+(U;0D9A)            EQU    OM/LM @_pfr26
+                                  pfr26
+(U;0D9B)            EQU    OM/LM @_pfr27
+                                  pfr27
+(U;0D9D)            EQU    OM/LM @_pfr29
+                                  pfr29
+(U;0E40)            EQU    OM/LM @_pilr00
+                                  pilr00
+(U;0E41)            EQU    OM/LM @_pilr01
+                                  pilr01
+(U;0E42)            EQU    OM/LM @_pilr02
+                                  pilr02
+(U;0E43)            EQU    OM/LM @_pilr03
+                                  pilr03
+(U;0E44)            EQU    OM/LM @_pilr04
+                                  pilr04
+(U;0E45)            EQU    OM/LM @_pilr05
+                                  pilr05
+(U;0E46)            EQU    OM/LM @_pilr06
+                                  pilr06
+(U;0E47)            EQU    OM/LM @_pilr07
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    28
+
+                                  pilr07
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0E48)            EQU    OM/LM @_pilr08
+                                  pilr08
+(U;0E49)            EQU    OM/LM @_pilr09
+                                  pilr09
+(U;0E4A)            EQU    OM/LM @_pilr10
+                                  pilr10
+(U;0E4D)            EQU    OM/LM @_pilr13
+                                  pilr13
+(U;0E4E)            EQU    OM/LM @_pilr14
+                                  pilr14
+(U;0E4F)            EQU    OM/LM @_pilr15
+                                  pilr15
+(U;0E50)            EQU    OM/LM @_pilr16
+                                  pilr16
+(U;0E51)            EQU    OM/LM @_pilr17
+                                  pilr17
+(U;0E52)            EQU    OM/LM @_pilr18
+                                  pilr18
+(U;0E53)            EQU    OM/LM @_pilr19
+                                  pilr19
+(U;0E54)            EQU    OM/LM @_pilr20
+                                  pilr20
+(U;0E56)            EQU    OM/LM @_pilr22
+                                  pilr22
+(U;0E57)            EQU    OM/LM @_pilr23
+                                  pilr23
+(U;0E58)            EQU    OM/LM @_pilr24
+                                  pilr24
+(U;0E59)            EQU    OM/LM @_pilr25
+                                  pilr25
+(U;0E5A)            EQU    OM/LM @_pilr26
+                                  pilr26
+(U;0E5B)            EQU    OM/LM @_pilr27
+                                  pilr27
+(U;0E5D)            EQU    OM/LM @_pilr29
+                                  pilr29
+(U;0490)            EQU    OM/LM @_pllctrl
+                                  pllctrl
+(U;048E)            EQU    OM/LM @_plldivg
+                                  plldivg
+(U;048C)            EQU    OM/LM @_plldivm
+                                  plldivm
+(U;048D)            EQU    OM/LM @_plldivn
+                                  plldivn
+(U;048F)            EQU    OM/LM @_pllmulg
+                                  pllmulg
+(U;0E00)            EQU    OM/LM @_podr00
+                                  podr00
+(U;0E01)            EQU    OM/LM @_podr01
+                                  podr01
+(U;0E02)            EQU    OM/LM @_podr02
+                                  podr02
+(U;0E03)            EQU    OM/LM @_podr03
+                                  podr03
+(U;0E04)            EQU    OM/LM @_podr04
+                                  podr04
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    29
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0E05)            EQU    OM/LM @_podr05
+                                  podr05
+(U;0E06)            EQU    OM/LM @_podr06
+                                  podr06
+(U;0E07)            EQU    OM/LM @_podr07
+                                  podr07
+(U;0E08)            EQU    OM/LM @_podr08
+                                  podr08
+(U;0E09)            EQU    OM/LM @_podr09
+                                  podr09
+(U;0E0A)            EQU    OM/LM @_podr10
+                                  podr10
+(U;0E0D)            EQU    OM/LM @_podr13
+                                  podr13
+(U;0E0E)            EQU    OM/LM @_podr14
+                                  podr14
+(U;0E0F)            EQU    OM/LM @_podr15
+                                  podr15
+(U;0E10)            EQU    OM/LM @_podr16
+                                  podr16
+(U;0E11)            EQU    OM/LM @_podr17
+                                  podr17
+(U;0E12)            EQU    OM/LM @_podr18
+                                  podr18
+(U;0E13)            EQU    OM/LM @_podr19
+                                  podr19
+(U;0E14)            EQU    OM/LM @_podr20
+                                  podr20
+(U;0E16)            EQU    OM/LM @_podr22
+                                  podr22
+(U;0E17)            EQU    OM/LM @_podr23
+                                  podr23
+(U;0E18)            EQU    OM/LM @_podr24
+                                  podr24
+(U;0E19)            EQU    OM/LM @_podr25
+                                  podr25
+(U;0E1A)            EQU    OM/LM @_podr26
+                                  podr26
+(U;0E1B)            EQU    OM/LM @_podr27
+                                  podr27
+(U;0E1D)            EQU    OM/LM @_podr29
+                                  podr29
+(U;0498)            EQU    OM/LM  _porten
+                                  porten
+(U;0F00)            EQU    OM/LM @_ppcr00
+                                  ppcr00
+(U;0F01)            EQU    OM/LM @_ppcr01
+                                  ppcr01
+(U;0F02)            EQU    OM/LM @_ppcr02
+                                  ppcr02
+(U;0F03)            EQU    OM/LM @_ppcr03
+                                  ppcr03
+(U;0F04)            EQU    OM/LM @_ppcr04
+                                  ppcr04
+(U;0F05)            EQU    OM/LM @_ppcr05
+                                  ppcr05
+(U;0F06)            EQU    OM/LM @_ppcr06
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    30
+
+                                  ppcr06
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0F07)            EQU    OM/LM @_ppcr07
+                                  ppcr07
+(U;0F08)            EQU    OM/LM @_ppcr08
+                                  ppcr08
+(U;0F09)            EQU    OM/LM @_ppcr09
+                                  ppcr09
+(U;0F0A)            EQU    OM/LM @_ppcr10
+                                  ppcr10
+(U;0F0D)            EQU    OM/LM @_ppcr13
+                                  ppcr13
+(U;0F0E)            EQU    OM/LM @_ppcr14
+                                  ppcr14
+(U;0F0F)            EQU    OM/LM @_ppcr15
+                                  ppcr15
+(U;0F10)            EQU    OM/LM @_ppcr16
+                                  ppcr16
+(U;0F11)            EQU    OM/LM @_ppcr17
+                                  ppcr17
+(U;0F12)            EQU    OM/LM @_ppcr18
+                                  ppcr18
+(U;0F13)            EQU    OM/LM @_ppcr19
+                                  ppcr19
+(U;0F14)            EQU    OM/LM @_ppcr20
+                                  ppcr20
+(U;0F16)            EQU    OM/LM @_ppcr22
+                                  ppcr22
+(U;0F17)            EQU    OM/LM @_ppcr23
+                                  ppcr23
+(U;0F18)            EQU    OM/LM @_ppcr24
+                                  ppcr24
+(U;0F19)            EQU    OM/LM @_ppcr25
+                                  ppcr25
+(U;0F1A)            EQU    OM/LM @_ppcr26
+                                  ppcr26
+(U;0F1B)            EQU    OM/LM @_ppcr27
+                                  ppcr27
+(U;0F1D)            EQU    OM/LM @_ppcr29
+                                  ppcr29
+(U;0EC0)            EQU    OM/LM @_pper00
+                                  pper00
+(U;0EC1)            EQU    OM/LM @_pper01
+                                  pper01
+(U;0EC2)            EQU    OM/LM @_pper02
+                                  pper02
+(U;0EC3)            EQU    OM/LM @_pper03
+                                  pper03
+(U;0EC4)            EQU    OM/LM @_pper04
+                                  pper04
+(U;0EC5)            EQU    OM/LM @_pper05
+                                  pper05
+(U;0EC6)            EQU    OM/LM @_pper06
+                                  pper06
+(U;0EC7)            EQU    OM/LM @_pper07
+                                  pper07
+(U;0EC8)            EQU    OM/LM @_pper08
+                                  pper08
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    31
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0EC9)            EQU    OM/LM @_pper09
+                                  pper09
+(U;0ECA)            EQU    OM/LM @_pper10
+                                  pper10
+(U;0ECD)            EQU    OM/LM @_pper13
+                                  pper13
+(U;0ECE)            EQU    OM/LM @_pper14
+                                  pper14
+(U;0ECF)            EQU    OM/LM @_pper15
+                                  pper15
+(U;0ED0)            EQU    OM/LM @_pper16
+                                  pper16
+(U;0ED1)            EQU    OM/LM @_pper17
+                                  pper17
+(U;0ED2)            EQU    OM/LM @_pper18
+                                  pper18
+(U;0ED3)            EQU    OM/LM @_pper19
+                                  pper19
+(U;0ED4)            EQU    OM/LM @_pper20
+                                  pper20
+(U;0ED6)            EQU    OM/LM @_pper22
+                                  pper22
+(U;0ED7)            EQU    OM/LM @_pper23
+                                  pper23
+(U;0ED8)            EQU    OM/LM @_pper24
+                                  pper24
+(U;0ED9)            EQU    OM/LM @_pper25
+                                  pper25
+(U;0EDA)            EQU    OM/LM @_pper26
+                                  pper26
+(U;0EDB)            EQU    OM/LM @_pper27
+                                  pper27
+(U;0EDD)            EQU    OM/LM @_pper29
+                                  pper29
+(U;0130)            EQU    OM/LM @_ptmr04
+                                  ptmr04
+(U;0138)            EQU    OM/LM @_ptmr05
+                                  ptmr05
+(U;0140)            EQU    OM/LM @_ptmr06
+                                  ptmr06
+(U;0148)            EQU    OM/LM @_ptmr07
+                                  ptmr07
+(U;0150)            EQU    OM/LM @_ptmr08
+                                  ptmr08
+(U;0158)            EQU    OM/LM @_ptmr09
+                                  ptmr09
+(U;0160)            EQU    OM/LM @_ptmr10
+                                  ptmr10
+(U;0168)            EQU    OM/LM @_ptmr11
+                                  ptmr11
+(U;0330)            EQU    OM/LM @_ptmr12
+                                  ptmr12
+(U;0338)            EQU    OM/LM @_ptmr13
+                                  ptmr13
+(U;0340)            EQU    OM/LM @_ptmr14
+                                  ptmr14
+(U;0348)            EQU    OM/LM @_ptmr15
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    32
+
+                                  ptmr15
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C1)              EQU    OM/LM @_pwc0
+                                  pwc0
+(U;C3)              EQU    OM/LM @_pwc1
+                                  pwc1
+(U;92)              EQU    OM/LM @_pwc10
+                                  pwc10
+(U;9A)              EQU    OM/LM @_pwc11
+                                  pwc11
+(U;A2)              EQU    OM/LM @_pwc12
+                                  pwc12
+(U;AA)              EQU    OM/LM @_pwc13
+                                  pwc13
+(U;B2)              EQU    OM/LM @_pwc14
+                                  pwc14
+(U;BA)              EQU    OM/LM @_pwc15
+                                  pwc15
+(U;C5)              EQU    OM/LM @_pwc2
+                                  pwc2
+(U;90)              EQU    OM/LM @_pwc20
+                                  pwc20
+(U;98)              EQU    OM/LM @_pwc21
+                                  pwc21
+(U;A0)              EQU    OM/LM @_pwc22
+                                  pwc22
+(U;A8)              EQU    OM/LM @_pwc23
+                                  pwc23
+(U;B0)              EQU    OM/LM @_pwc24
+                                  pwc24
+(U;B8)              EQU    OM/LM @_pwc25
+                                  pwc25
+(U;C7)              EQU    OM/LM @_pwc3
+                                  pwc3
+(U;C9)              EQU    OM/LM @_pwc4
+                                  pwc4
+(U;CB)              EQU    OM/LM @_pwc5
+                                  pwc5
+(U;97)              EQU    OM/LM @_pws10
+                                  pws10
+(U;9F)              EQU    OM/LM @_pws11
+                                  pws11
+(U;A7)              EQU    OM/LM @_pws12
+                                  pws12
+(U;AF)              EQU    OM/LM @_pws13
+                                  pws13
+(U;B7)              EQU    OM/LM @_pws14
+                                  pws14
+(U;BF)              EQU    OM/LM @_pws15
+                                  pws15
+(U;96)              EQU    OM/LM @_pws20
+                                  pws20
+(U;9E)              EQU    OM/LM @_pws21
+                                  pws21
+(U;A6)              EQU    OM/LM @_pws22
+                                  pws22
+(U;AE)              EQU    OM/LM @_pws23
+                                  pws23
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    33
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;B6)              EQU    OM/LM @_pws24
+                                  pws24
+(U;BE)              EQU    OM/LM @_pws25
+                                  pws25
+(U;3A)              EQU    OM/LM @_rbsync
+                                  rbsync
+(U;0684)            EQU    OM/LM @_rcr
+                                  rcr
+(U;53)              EQU    OM/LM @_rdr02
+                                  rdr02
+(U;63)              EQU    OM/LM @_rdr04
+                                  rdr04
+(U;6B)              EQU    OM/LM  _rdr05
+                                  rdr05
+(U;73)              EQU    OM/LM @_rdr06
+                                  rdr06
+(U;7B)              EQU    OM/LM @_rdr07
+                                  rdr07
+(U;04CF)            EQU    OM/LM @_regctr
+                                  regctr
+(U;04CE)            EQU    OM/LM @_regsel
+                                  regsel
+(U;0390)            EQU    OM/LM @_roms
+                                  roms
+(U;0480)            EQU    OM/LM @_rsrr
+                                  rsrr
+(U;50)              EQU    OM/LM @_scr02
+                                  scr02
+(U;60)              EQU    OM/LM @_scr04
+                                  scr04
+(U;68)              EQU    OM/LM  _scr05
+                                  scr05
+(U;70)              EQU    OM/LM @_scr06
+                                  scr06
+(U;78)              EQU    OM/LM @_scr07
+                                  scr07
+(U;019C)            EQU    OM/LM @_sgar
+                                  sgar
+(U;0198)            EQU    OM/LM @_sgcr
+                                  sgcr
+(U;0198)            EQU    OM/LM @_sgcrh
+                                  sgcrh
+(U;0199)            EQU    OM/LM @_sgcrl
+                                  sgcrl
+(U;019F)            EQU    OM/LM @_sgdr
+                                  sgdr
+(U;019A)            EQU    OM/LM @_sgfr
+                                  sgfr
+(U;019E)            EQU    OM/LM @_sgtr
+                                  sgtr
+(U;51)              EQU    OM/LM @_smr02
+                                  smr02
+(U;61)              EQU    OM/LM @_smr04
+                                  smr04
+(U;69)              EQU    OM/LM  _smr05
+                                  smr05
+(U;71)              EQU    OM/LM @_smr06
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    34
+
+                                  smr06
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;79)              EQU    OM/LM @_smr07
+                                  smr07
+ 0004038A(ABS)      Addr.  OM/LM @_spi_cs_disable
+                                  spi_cs_disable
+ 0004037A(ABS)      Addr.  OM/LM @_spi_cs_enable
+                                  spi_cs_enable
+ 00040266(ABS)      Addr.  OM/LM @_spi_init
+                                  spi_init
+ 00040310(ABS)      Addr.  OM/LM @_spi_rx_8Bit
+                                  spi_rx_8Bit
+ 0004032E(ABS)      Addr.  OM/LM @_spi_tx_8Bit
+                                  spi_tx_8Bit
+(U;52)              EQU    OM/LM @_ssr02
+                                  ssr02
+(U;62)              EQU    OM/LM @_ssr04
+                                  ssr04
+(U;6A)              EQU    OM/LM  _ssr05
+                                  ssr05
+(U;72)              EQU    OM/LM @_ssr06
+                                  ssr06
+(U;7A)              EQU    OM/LM @_ssr07
+                                  ssr07
+(U;C002)            EQU    OM/LM @_statr0
+                                  statr0
+(U;C102)            EQU    OM/LM @_statr1
+                                  statr1
+(U;C202)            EQU    OM/LM @_statr2
+                                  statr2
+(U;0481)            EQU    OM/LM @_stcr
+                                  stcr
+(U;0482)            EQU    OM/LM @_tbcr
+                                  tbcr
+(U;01F3)            EQU    OM/LM @_tccs0
+                                  tccs0
+(U;01F7)            EQU    OM/LM @_tccs1
+                                  tccs1
+(U;01FB)            EQU    OM/LM @_tccs2
+                                  tccs2
+(U;01FF)            EQU    OM/LM @_tccs3
+                                  tccs3
+(U;02F3)            EQU    OM/LM @_tccs4
+                                  tccs4
+(U;02F7)            EQU    OM/LM @_tccs5
+                                  tccs5
+(U;02FB)            EQU    OM/LM @_tccs6
+                                  tccs6
+(U;02FF)            EQU    OM/LM @_tccs7
+                                  tccs7
+(U;01F0)            EQU    OM/LM @_tcdt0
+                                  tcdt0
+(U;01F4)            EQU    OM/LM @_tcdt1
+                                  tcdt1
+(U;01F8)            EQU    OM/LM @_tcdt2
+                                  tcdt2
+(U;01FC)            EQU    OM/LM @_tcdt3
+                                  tcdt3
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    35
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;02F0)            EQU    OM/LM @_tcdt4
+                                  tcdt4
+(U;02F4)            EQU    OM/LM @_tcdt5
+                                  tcdt5
+(U;02F8)            EQU    OM/LM @_tcdt6
+                                  tcdt6
+(U;02FC)            EQU    OM/LM @_tcdt7
+                                  tcdt7
+(U;0683)            EQU    OM/LM @_tcr
+                                  tcr
+(U;53)              EQU    OM/LM @_tdr02
+                                  tdr02
+(U;63)              EQU    OM/LM @_tdr04
+                                  tdr04
+(U;6B)              EQU    OM/LM  _tdr05
+                                  tdr05
+(U;73)              EQU    OM/LM @_tdr06
+                                  tdr06
+(U;7B)              EQU    OM/LM @_tdr07
+                                  tdr07
+(U;C00A)            EQU    OM/LM @_testr0
+                                  testr0
+(U;C10A)            EQU    OM/LM @_testr1
+                                  testr1
+(U;C20A)            EQU    OM/LM @_testr2
+                                  testr2
+(U;01B6)            EQU    OM/LM @_tmcsr0
+                                  tmcsr0
+(U;01BE)            EQU    OM/LM @_tmcsr1
+                                  tmcsr1
+(U;01C6)            EQU    OM/LM @_tmcsr2
+                                  tmcsr2
+(U;01CE)            EQU    OM/LM @_tmcsr3
+                                  tmcsr3
+(U;01D6)            EQU    OM/LM @_tmcsr4
+                                  tmcsr4
+(U;01DE)            EQU    OM/LM @_tmcsr5
+                                  tmcsr5
+(U;01E6)            EQU    OM/LM @_tmcsr6
+                                  tmcsr6
+(U;01EE)            EQU    OM/LM @_tmcsr7
+                                  tmcsr7
+(U;01B6)            EQU    OM/LM @_tmcsrh0
+                                  tmcsrh0
+(U;01BE)            EQU    OM/LM @_tmcsrh1
+                                  tmcsrh1
+(U;01C6)            EQU    OM/LM @_tmcsrh2
+                                  tmcsrh2
+(U;01CE)            EQU    OM/LM @_tmcsrh3
+                                  tmcsrh3
+(U;01D6)            EQU    OM/LM @_tmcsrh4
+                                  tmcsrh4
+(U;01DE)            EQU    OM/LM @_tmcsrh5
+                                  tmcsrh5
+(U;01E6)            EQU    OM/LM @_tmcsrh6
+                                  tmcsrh6
+(U;01EE)            EQU    OM/LM @_tmcsrh7
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    36
+
+                                  tmcsrh7
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;01B7)            EQU    OM/LM @_tmcsrl0
+                                  tmcsrl0
+(U;01BF)            EQU    OM/LM @_tmcsrl1
+                                  tmcsrl1
+(U;01C7)            EQU    OM/LM @_tmcsrl2
+                                  tmcsrl2
+(U;01CF)            EQU    OM/LM @_tmcsrl3
+                                  tmcsrl3
+(U;01D7)            EQU    OM/LM @_tmcsrl4
+                                  tmcsrl4
+(U;01DF)            EQU    OM/LM @_tmcsrl5
+                                  tmcsrl5
+(U;01E7)            EQU    OM/LM @_tmcsrl6
+                                  tmcsrl6
+(U;01EF)            EQU    OM/LM @_tmcsrl7
+                                  tmcsrl7
+(U;01B2)            EQU    OM/LM @_tmr0
+                                  tmr0
+(U;01BA)            EQU    OM/LM @_tmr1
+                                  tmr1
+(U;01C2)            EQU    OM/LM @_tmr2
+                                  tmr2
+(U;01CA)            EQU    OM/LM @_tmr3
+                                  tmr3
+(U;01D2)            EQU    OM/LM @_tmr4
+                                  tmr4
+(U;01DA)            EQU    OM/LM @_tmr5
+                                  tmr5
+(U;01E2)            EQU    OM/LM @_tmr6
+                                  tmr6
+(U;01EA)            EQU    OM/LM @_tmr7
+                                  tmr7
+(U;01B0)            EQU    OM/LM @_tmrlr0
+                                  tmrlr0
+(U;01B8)            EQU    OM/LM @_tmrlr1
+                                  tmrlr1
+(U;01C0)            EQU    OM/LM @_tmrlr2
+                                  tmrlr2
+(U;01C8)            EQU    OM/LM @_tmrlr3
+                                  tmrlr3
+(U;01D0)            EQU    OM/LM @_tmrlr4
+                                  tmrlr4
+(U;01D8)            EQU    OM/LM @_tmrlr5
+                                  tmrlr5
+(U;01E0)            EQU    OM/LM @_tmrlr6
+                                  tmrlr6
+(U;01E8)            EQU    OM/LM @_tmrlr7
+                                  tmrlr7
+(U;C082)            EQU    OM/LM @_treqr10
+                                  treqr10
+(U;C182)            EQU    OM/LM @_treqr11
+                                  treqr11
+(U;C282)            EQU    OM/LM @_treqr12
+                                  treqr12
+(U;C080)            EQU    OM/LM @_treqr120
+                                  treqr120
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    37
+
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;C180)            EQU    OM/LM @_treqr121
+                                  treqr121
+(U;C280)            EQU    OM/LM @_treqr122
+                                  treqr122
+(U;C080)            EQU    OM/LM @_treqr20
+                                  treqr20
+(U;C180)            EQU    OM/LM @_treqr21
+                                  treqr21
+(U;C280)            EQU    OM/LM @_treqr22
+                                  treqr22
+(U;0304)            EQU    OM/LM @_udcc0
+                                  udcc0
+(U;0308)            EQU    OM/LM @_udcc1
+                                  udcc1
+(U;0314)            EQU    OM/LM @_udcc2
+                                  udcc2
+(U;0318)            EQU    OM/LM @_udcc3
+                                  udcc3
+(U;0304)            EQU    OM/LM @_udcch0
+                                  udcch0
+(U;0308)            EQU    OM/LM @_udcch1
+                                  udcch1
+(U;0314)            EQU    OM/LM @_udcch2
+                                  udcch2
+(U;0318)            EQU    OM/LM @_udcch3
+                                  udcch3
+(U;0305)            EQU    OM/LM @_udccl0
+                                  udccl0
+(U;0309)            EQU    OM/LM @_udccl1
+                                  udccl1
+(U;0315)            EQU    OM/LM @_udccl2
+                                  udccl2
+(U;0319)            EQU    OM/LM @_udccl3
+                                  udccl3
+(U;0303)            EQU    OM/LM @_udcr0
+                                  udcr0
+(U;0302)            EQU    OM/LM @_udcr1
+                                  udcr1
+(U;0302)            EQU    OM/LM @_udcr10
+                                  udcr10
+(U;0313)            EQU    OM/LM @_udcr2
+                                  udcr2
+(U;0312)            EQU    OM/LM @_udcr3
+                                  udcr3
+(U;0312)            EQU    OM/LM @_udcr32
+                                  udcr32
+(U;0307)            EQU    OM/LM @_udcs0
+                                  udcs0
+(U;030B)            EQU    OM/LM @_udcs1
+                                  udcs1
+(U;0317)            EQU    OM/LM @_udcs2
+                                  udcs2
+(U;031B)            EQU    OM/LM @_udcs3
+                                  udcs3
+(U;0301)            EQU    OM/LM @_udrc0
+                                  udrc0
+(U;0300)            EQU    OM/LM @_udrc1
+FR/FR80 Family SOFTUNE Linker Symbol List                                                       2006-11-15 13:18:01  Page:    38
+
+                                  udrc1
+Symbol Value        Type   Def.  Symbol Name (Top 97)                                                                              C
+(U;0300)            EQU    OM/LM @_udrc10
+                                  udrc10
+(U;0311)            EQU    OM/LM @_udrc2
+                                  udrc2
+(U;0310)            EQU    OM/LM @_udrc3
+                                  udrc3
+(U;0310)            EQU    OM/LM @_udrc32
+                                  udrc32
+(U;04CA)            EQU    OM/LM @_wpcrh
+                                  wpcrh
+(U;04CB)            EQU    OM/LM @_wpcrl
+                                  wpcrl
+(U;0485)            EQU    OM/LM @_wpr
+                                  wpr
+(U;04A4)            EQU    OM/LM @_wtbr
+                                  wtbr
+(U;04A1)            EQU    OM/LM @_wtcer
+                                  wtcer
+(U;04A2)            EQU    OM/LM @_wtcr
+                                  wtcr
+(U;04A8)            EQU    OM/LM @_wthr
+                                  wthr
+(U;04A9)            EQU    OM/LM @_wtmr
+                                  wtmr
+(U;04AA)            EQU    OM/LM @_wtsr
+                                  wtsr

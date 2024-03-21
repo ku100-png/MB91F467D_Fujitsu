@@ -1,0 +1,11 @@
+-g
+-w 1
+-O 0
+-K LONGADDRESS
+-B
+-K NOSCHEDULE
+-K A1
+-K SARG
+-c
+-cwno
+-cpu MB91F467D

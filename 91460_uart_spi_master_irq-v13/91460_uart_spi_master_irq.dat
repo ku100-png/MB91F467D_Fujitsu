@@ -1,0 +1,165 @@
+$CPUSERIES-911
+$Prj-STANDALONE
+$0
+-g
+-w 1
+-O 0
+-K SHORTADDRESS
+-B
+-K NOSCHEDULE
+-K A1
+-K SARG
+-Xdof
+-K NOEOPT
+-K NOLIB
+-K NOUNROLL
+$other
+$time
+1129189314
+$end
+$1
+-g
+-w 2
+-O 0
+-linf ON
+-lsrc ON
+-lsec ON
+-lcros OFF
+-linc ON
+-lexp OBJ
+-pl 60
+-pw 100
+-tab 8
+-Xdof
+$other
+$time
+1119939829
+$end
+$2
+-g
+-AL 2
+-ro ROM_AREA=0x00040000/0x0014FFFF
+-ra D_RAM=0x00028000/0x0002FFFF
+-ra ID_RAM=0x00030000/0x00037FFF
+-ra I_CACHE=0x00007000/0x000070FF
+-sc CODE+@INIT+CONST=ROM_AREA
+-sc DATA/Data+INIT/Data+SSTACK/Data+USTACK/Data=D_RAM
+-sc CODE_START/Code=0x000F4000
+-sc INTVECT/Const=0x000FFC00
+-check_locate
+-m
+-pl 60
+-pw 132
+-Xals
+-Xalr
+-na
+-w 1
+-Xdof
+$other
+$time
+1142595618
+$end
+$3
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-Xdof
+$other
+$time
+1141036590
+$end
+$4
+-Xdof
+$other
+$time
+1119274137
+$end
+$5
+$other
+$time
+1119274137
+$end
+$Prjend
+$Prj-MONDEB_INTERNAL
+$0
+-g
+-w 1
+-O 0
+-K LONGADDRESS
+-B
+-K NOSCHEDULE
+-K A1
+-K SARG
+-Xdof
+-K NOEOPT
+-K NOLIB
+-K NOUNROLL
+$other
+$time
+1142592435
+$end
+$1
+-g
+-w 2
+-O 0
+-linf ON
+-lsrc ON
+-lsec ON
+-lcros OFF
+-linc ON
+-lexp OBJ
+-pl 60
+-pw 100
+-tab 8
+-Xdof
+$other
+$time
+1142592435
+$end
+$2
+-g
+-AL 2
+-ro ROM_AREA=0x00840000/0x0094FFFF
+-ra D_RAM=0x00029000/0x0002FFFF
+-ra ID_RAM=0x00030000/0x00037FFF
+-ra I_CACHE=0x00007000/0x000070FF
+-sc CODE+@INIT+CONST=ROM_AREA
+-sc DATA/Data+INIT/Data+SSTACK/Data+USTACK/Data=D_RAM
+-sc CODE_START/Code=0x008F4000
+-check_locate
+-m
+-pl 60
+-pw 132
+-Xals
+-Xalr
+-na
+-w 1
+-Xdof
+$other
+$time
+1141036590
+$end
+$3
+-dt s,d,r,a
+-pl 60
+-pw 132
+-g
+-Xdof
+$other
+$time
+1141036590
+$end
+$4
+-Xdof
+$other
+$time
+1130252218
+$end
+$5
+$other
+$time
+1130252218
+$end
+$Prjend
+$CPUSERIESEND

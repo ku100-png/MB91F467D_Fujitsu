@@ -1,0 +1,150 @@
+[Version]
+DLLVer=02.5007.00.1
+PRJVer=1
+
+[PRJKIND]
+mode=1
+
+[CPUTYPE]
+CpuSerise=911
+
+[DirInfo]
+PRJ=
+
+[PrjInfo]
+Count=2
+PrjInfo-0=STANDALONE
+PrjInfo-1=MONDEB_INTERNAL
+Active=STANDALONE
+
+[MEMBER]
+F0=7
+F1=0 f Source Files
+F2=0 c SRC\MAIN.c
+F3=0 a SRC\mb91467d.asm
+F4=0 * readme.txt
+F5=0 a SRC\Start91460.asm
+F6=0 c SRC\vectors.c
+F7=0 f Include Files
+
+[OPTIONFILE]
+FILE=91460_uart_spi_master_irq.dat
+
+[CPUTYPE-STANDALONE]
+CsvFile=Lib\911\911.csv
+CpuName=MB91F467D
+Count=0
+BusMode=2
+BusWidth=2
+
+[DirInfo-STANDALONE]
+CONFIG=STANDALONE\
+OBJ=STANDALONE\OBJ\
+LST=STANDALONE\LST\
+OPT=STANDALONE\OPT\
+
+[MEMBER-STANDALONE]
+F0=5
+F1=0 m 1 STANDALONE\ABS\91460_uart_spi_master_irq.abs
+F2=1 c 1 SRC\vectors.c
+F2-1=- SRC\mb91467d.h
+F3=0 a 1 SRC\Start91460.asm
+F4=1 a 1 SRC\mb91467d.asm
+F4-1=- SRC\mb91467d.h
+F5=1 c 1 SRC\MAIN.c
+F5-1=- SRC\mb91467d.h
+
+[BUILDMODE-STANDALONE]
+kernel=1
+
+[RUNSET-STANDALONE]
+CONVERT=1
+CONVERTKIND=0
+
+[DebState-STANDALONE]
+SupCount=6
+Supfile-0=STANDALONE\Simulator.sup
+Supfile-1=STANDALONE\MB2198-01-USB.sup
+Supfile-2=STANDALONE\MB2198-01-COM1.sup
+Supfile-3=STANDALONE\MB2198-01-LAN.sup
+Supfile-4=STANDALONE\Mondeb_57K6_com1.sup
+Supfile-5=STANDALONE\Mondeb_57K6_com2.sup
+Current=MB2198-01-USB.sup
+AliasFile=
+CPURunMode=
+
+[CPUTYPE-MONDEB_INTERNAL]
+CsvFile=Lib\911\911.csv
+CpuName=MB91F467D
+Count=0
+BusMode=3
+BusWidth=2
+
+[DirInfo-MONDEB_INTERNAL]
+CONFIG=MONDEB_INTERNAL\
+OBJ=MONDEB_INTERNAL\OBJ\
+LST=MONDEB_INTERNAL\LST\
+OPT=MONDEB_INTERNAL\OPT\
+
+[MEMBER-MONDEB_INTERNAL]
+F0=5
+F1=0 m 1 MONDEB_INTERNAL\ABS\91460_uart_spi_master_irq.abs
+F2=1 c 1 SRC\vectors.c
+F2-1=- SRC\mb91467d.h
+F3=0 a 1 SRC\Start91460.asm
+F4=1 a 1 SRC\mb91467d.asm
+F4-1=- SRC\mb91467d.h
+F5=1 c 1 SRC\MAIN.c
+F5-1=- SRC\mb91467d.h
+
+[BUILDMODE-MONDEB_INTERNAL]
+kernel=1
+
+[RUNSET-MONDEB_INTERNAL]
+CONVERT=1
+CONVERTKIND=0
+
+[DebState-MONDEB_INTERNAL]
+SupCount=2
+Supfile-0=MONDEB_INTERNAL\Mondeb_57K6_com1.sup
+Supfile-1=MONDEB_INTERNAL\Mondeb_57K6_com2.sup
+Current=Mondeb_57K6_com1.sup
+AliasFile=
+CPURunMode=
+
+[AsmBefore]
+Count=0
+
+[AsmAfter]
+Count=0
+
+[CcBefore]
+Count=0
+
+[CcAfter]
+Count=0
+
+[LnkBefore]
+Count=0
+
+[LnkAfter]
+Count=0
+
+[LibBefore]
+Count=0
+
+[LibAfter]
+Count=0
+
+[CnvBefore]
+Count=0
+
+[CnvAfter]
+Count=0
+
+[ConfigBefore]
+Count=0
+
+[ConfigAfter]
+Count=0
+
